@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="static/css/base.css">
+    {% block page_css %}{% endblock %}
+</head>
+<body>
+    <header>
+
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+                <div class="container-fluid">
+                  <a class="navbar-brand">Ancient History Museum</a>
+          
+                  <a href="/">
+                    <img src="https://i.postimg.cc/rp4BkzCx/museum-logo.png" alt="Museum Logo">
+                  </a>
+          
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+          
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          
+                      <li class="nav-item1">
+                        <a class="nav-link" href="/exhibits">Exhibits</a>
+                      </li>
+          
+                      <li class="nav-item1">
+                        <a class="nav-link" href="/news">News</a>
+                      </li>
+          
+                      <li class="nav-item1">
+                        <a class="nav-link" href="/events">Events</a>
+                      </li>
+                      
+                    </ul>
+          
+                    <ul class="navbar-nav2 me-auto mb-2 mb-lg-0">
+          
+                      <li class="nav-item2">
+                          <a class="nav-link" href="/profile">Account</a>
+                      </li>
+          
+                      <li class="nav-item2">
+                          <img src="https://i.postimg.cc/V6c3L1DT/user.png" alt="Profile Icon">
+                      </li>
+          
+                    </ul>
+          
+                  </div>
+          
+                </div>
+          
+            </nav>
+        </div>
+        
+    </header>
+    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+
+        <div class="container">
+            <div class="footer-container">
+
+                <div class="footer-section about">
+                  <h3>About</h3>
+                  <ul>
+                    <li><a href="/contact">Contact Us</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/feedback">Feedback</a></li>
+                  </ul>
+                </div>
+            
+                <div class="footer-section social">
+                  <h3>Follow us</h3>
+                  <div class="social-icons">
+                    <a href="https://x.com" target="_blank" class="icon"><img src="/static/images/footer/twitter.png" class="social-icon twitter"></a>
+                    <a href="https://facebook.com" target="_blank" class="icon"><img src="https://i.postimg.cc/g2XyShmy/facebook.png" class="social-icon facebook"></a>
+                    <a href="https://instagram.com" target="_blank" class="icon"><img src="https://i.postimg.cc/nLq4ZtsC/instagram.png" class="social-icon instagram"></a>
+                    <a href="https://tiktok.com" target="_blank" class="icon"><img src="https://i.postimg.cc/vZJrpmZJ/tiktok.png" class="social-icon tiktok"></a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&autoplay=1" target="_blank" class="icon"><img src="https://i.postimg.cc/0Qf7Md0v/youtube.png" class="social-icon youtube"></a>
+                  </div>
+                </div>
+            
+                <div class="footer-section newsletter">
+                  <h3>Newsletter</h3>
+                  <form>
+                    <input type="email" placeholder="Your email" id="email-placeholder" required>
+                    <button type="submit">
+                      <img src="https://i.postimg.cc/651LfcJ5/email.png" class="email"> SUBSCRIBE
+                    </button>
+                  </form>
+                </div>
+          
+                <div class="footer-bottom">
+                  <ul>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Manage Cookies</a></li>
+                    <li><a href="#">Do not share my personal information</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                  </ul>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+/* Carousels Section */
+
+.carousel {
+    position: relative;
+    display: flex;
+    margin-top: 50px;
+}
+
+.carousel button.active {
+    background-color: #000000 !important;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    zoom: 200%;
+}
+
+.carousel-indicators {
+    zoom: 200%;
+}
+
+/* Events Section */
+
+#events {
+    margin-top: 50px;
+}
+
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: #343333;
+    color: #ffffff;
+    border: none;
+    overflow: hidden;
+    border-radius: 0px !important;
+    height: 100%;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0px !important;
+}
+
+.card-body {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-text small {
+    font-size: 0.9rem;
+}
+
+.calendar {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.small, small {
+    font-size: 1.0em !important;
+}
+
+.badge {
+    font-size: 1.0rem;
+    display: inline-flex;
+    justify-content: space-evenly;
+    min-width: 65px;
+    height: 65px;
+    text-align: center;
+    background-color: #000000;
+}
+
+#price {
+    margin-top: 22px;
+}
+
+.ticket {
+    width: 25px;
+    height: 25px;
+    margin-top: 4px;
+}
+
+.card-text {
+    margin-top: 20px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 25px;
+}
+
+.btn-dark {
+    background-color: #000000;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 10px 15px;
+}
+
+.btn-dark:hover {
+    background-color: #191818;
+}
+
+.badge2 {
+    display: flex;
+    align-items: center;
+    min-width: 20px;
+    height: 25px;
+    width: 25px;
+    background-color: #ffffff;
+}
+
+.button-arrow {
+    height: 18px;
+    width: 18px;
+    margin: -2px;
+}
+
+.row {
+    gap: 0px;
+    display: flex;
+}
+
+.container-fluid2 {
+    display: flex;
+    margin-top: 20px;
+    background-color: #343333 !important;
+    padding: 100px;
+}
