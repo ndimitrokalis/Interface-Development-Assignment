@@ -9,7 +9,117 @@
 {% block content %}
 <div class="container">
 
-    <h1>News Page</h1>
+    <div class="news-container">
+        
+        <div class="news-header">
+            <h1>Latest news</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button class="search-button"><img src="/static/images/icons/magnifier.png"></button>
+            </div>
+        </div>
+
+        <div class="grid-container">
+
+            <div class="news-card">
+                <img src="/static/images/items/slide 1.jpg" class="news-image">
+                <div class="news-content">
+                    <h2 class="news-title">New Exquisite Ancient Ceramic Vessel on Display</h2>
+                    <p class="news-description">We are thrilled to showcase a remarkable ancient ceramic vessel recently added to our museum's collection. This beautifully preserved artifact features intricate relief work, depicting a procession of figures, offering a glimpse into the artistry and cultural symbolism of its time. The fine craftsmanship and detailed motifs reflect the historical importance of communal rituals and storytelling in ancient societies.</p>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <img src="/static/images/exhibits/exhibit 8.png" class="news-image">
+                <div class="news-content">
+                    <h2 class="news-title">Exciting Renovation: The Egyptian Exhibit is Getting a Makeover!</h2>
+                    <p class="news-description">We are thrilled to showcase a remarkable ancient ceramic vessel recently added to our museum's collection. This beautifully preserved artifact features intricate relief work, depicting a procession of figures, offering a glimpse into the artistry and cultural symbolism of its time. The fine craftsmanship and detailed motifs reflect the historical importance of communal rituals and storytelling in ancient societies.</p>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <img src="/static/images/news/museum news 4.png" class="news-image">
+                <div class="news-content">
+                    <h2 class="news-title">Discover Our Museum in Your Language: New Multilingual Audio Tour App!</h2>
+                    <p class="news-description">We are excited to announce the launch of our brand-new Museum Audio Tour App! Designed to make your visit even more enriching, the app offers guided tours in multiple languages, ensuring everyone can explore our exhibits with ease and enjoyment.</p>
+                    <div class="app-features">
+                        Available now for iOS and Android!
+                        <div class="app-badge"><a href="#">FREE DOWNLOAD</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <img src="/static/images/events/event 1.png" class="news-image">
+                <div class="news-content">
+                    <h2 class="news-title">Journey Through History: Explore the Ancient Silk Roads at Our Upcoming Event</h2>
+                    <p class="news-description">We are thrilled to invite you to our upcoming event, "The Ancient Silk Roads: Connecting Cultures, Trade, and Time", where history comes alive! This special event will showcase the legendary trade routes that connected the East and West, shaping the world through commerce, culture, and ideas.</p>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <img src="/static/images/news/museum news 5.png" class="news-image">
+                <div class="news-content">
+                    <h2 class="news-title">Bringing History to Life: New Collaboration with Schools for Educational Visits</h2>
+                    <p class="news-description">We are excited to announce a new initiative at our Museum—a special collaboration with schools to bridge the next generation of learners! Our museum is now offering tailored educational visits designed to complement classroom learning and provide students with immersive experiences that bring history, art, and culture to life.</p>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <img src="/static/images/news/museum news 6.png" class="news-image">
+                <div class="news-content">
+                    <h2 class="news-title">A Record-Breaking Summer: Record High Visitor Numbers at our Museum!</h2>
+                    <p class="news-description">We are thrilled to announce that our Museum has experienced a record-breaking summer season, welcoming more visitors than ever before! This success reflects the growing interest in our unique exhibits, engaging events, and interactive experiences.</p>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <img src="/static/images/news/museum news 7.png" class="news-image">
+                <div class="news-content">
+                    <h2 class="news-title">We're Live! Follow us on Social Media!</h2>
+                    <p class="news-description">Exciting news! Our Museum is now on social media. We're thrilled to connect with you in new ways and share our fascinating world of history wherever you are.</p>
+                    <div class="social-features">
+                        <span>Behind-the-scenes content</span>
+                        <span>Live Q&A sessions</span>
+                        <span>Virtual tours</span>
+                        <span>Event updates</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <img src="/static/images/news/museum news 8.png" class="news-image">
+                <div class="news-content">
+                    <h2 class="news-title">Expert Insights: Discover the Stories Behind the Artifacts</h2>
+                    <p class="news-description">We are excited to introduce our new series, 'Expert Insights', where our curators and historians share their knowledge and behind-the-scenes experiences about our fascinating collection.</p>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <img src="/static/images/news/museum news 9.png" class="news-image">
+                <div class="news-content">
+                    <h2 class="news-title">Win Big: Exciting Giveaway Alert!</h2>
+                    <p class="news-description">We're thrilled to announce our Museum Name Giveaway, where you have the chance to win exclusive prizes and experiences!</p>
+                    <ul class="giveaway-list">
+                        <li>Custom Artifact Replica</li>
+                        <li>Free Annual Museum Membership</li>
+                        <li>$250 Gift Shop Voucher</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="pagination">
+            <button class="page-number active">1</button>
+            <button class="page-number">2</button>
+            <button class="page-number">3</button>
+            <span class="page-dots">...</span>
+            <button class="page-next"><img src="/static/images/icons/next page.png"></button>
+            <button class="page-last"><img src="/static/images/icons/last page.png"></button>
+        </div>
+
+    </div>
     
 </div>
 {% endblock %}

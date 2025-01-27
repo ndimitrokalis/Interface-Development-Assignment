@@ -9,7 +9,79 @@
 {% block content %}
 <div class="container">
 
-    <h1>Services Page</h1>
+    <div class="services-container">
+        
+        <div class="services-header">
+            <h1>Provided services</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button class="search-button"><img src="/static/images/icons/magnifier.png"></button>
+            </div>
+        </div>
     
+        <div class="services-content">
+            <section class="service-section">
+                <h2 class="service-title">Accessibility</h2>
+                <ul class="service-list">
+                    <li>Everything inside our premises is wheelchair accessible (Exhibits, Restrooms, Cafeteria etc).</li>
+                    <li>A comprehensive guide written in Braille available in English, German, French and Greek.</li>
+                    <li>Museum maps are available at both our entrance hall and <a href="#">here</a>.</li>
+                    <li>Sign language tours are available by booking.</li>
+                    <li>We provide assistance for visitors requiring extra support.</li>
+                </ul>
+            </section>
+    
+            <section class="service-section">
+                <h2 class="service-title">Experience</h2>
+                <ul class="service-list">
+                    <li>Guided tours provided by expert lecturers, available for individuals, families, or groups.</li>
+                    <li>Multilingual audio tours accessible through our app which you can download <a href="#">here</a>.</li>
+                    <li>Our exhibits include interactive hands-on displays for a more immersive and informative experience.</li>
+                    <li>Family Activities that include kid-friendly scavenger hunts, play areas and storytelling sessions.</li>
+                </ul>
+            </section>
+    
+            <section class="service-section">
+                <h2 class="service-title">Educational</h2>
+                <ul class="service-list">
+                    <li>We provide learning classes about art restoration, archaeology and history.</li>
+                    <li>Collaboration with schools for educational visits.</li>
+                    <li>We host monthly talks by historians, archaeologists and artists.</li>
+                    <li>Programs for students and enthusiasts to learn museum operations.</li>
+                </ul>
+            </section>
+    
+            <section class="service-section">
+                <h2 class="service-title">Support</h2>
+                <ul class="service-list">
+                    <li>Dedicated help-desk for missing items.</li>
+                    <li>We provide lockers and coat checks for visitor convenience.</li>
+                    <li>For families we provide on-site childcare and activity areas for young children.</li>
+                    <li>In case of an emergency we provide well-equipped facilities and trained staff.</li>
+                </ul>
+            </section>
+    
+            <section class="service-section">
+                <h2 class="service-title">Discounts</h2>
+                <ul class="service-list">
+                    <li>Discounts of 50% for families over 5 children.</li>
+                    <li>Discounts of 50% for children under 12 years old.</li>
+                    <li>Discounts of 50% for people of university students.</li>
+                    <li>Discounts of 50% for people with disability.</li>
+                </ul>
+            </section>
+        </div>
+    
+        <div class="pagination">
+            <button class="page-number active">1</button>
+            <button class="page-number">2</button>
+            <button class="page-number">3</button>
+            <span class="page-dots">...</span>
+            <button class="page-next"><img src="/static/images/icons/next page.png"></button>
+            <button class="page-last"><img src="/static/images/icons/last page.png"></button>
+        </div>
+
+    </div>
+
 </div>
 {% endblock %}

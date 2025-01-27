@@ -1,0 +1,59 @@
+body {
+    background-color: #1F1C1C;
+}
+
+.container-fluid {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+    width: 300px; /* Sidebar width */
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+.actions {
+    flex: 1;
+}
+
+.sidebar h2 {
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    font-size: 1.8rem;
+}
+
+.sidebar a {
+    display: block;
+    padding: 15px;
+    color: #ffffff;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+.sidebar a:hover {
+    background-color: #454242;
+}
+
+.content {
+    padding: 20px;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #070707;
+    padding: 15px;
+    color: #ffffff
+}
+
+.header h1 {
+    font-size: 2rem;
+}
