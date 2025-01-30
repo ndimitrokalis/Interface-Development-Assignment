@@ -1,0 +1,108 @@
+/* Profile Cards */
+.profile-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+.info-card {
+    background-color: #2a2929;
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.info-card h3 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.status-badge.premium {
+    background-color: #ffd700;
+    color: #000000;
+}
+
+.membership p {
+    color: #ffffff;
+}
+
+.membership .btn-renew {
+    background-color: #454242;
+    color: white;
+}
+
+.membership .btn-renew:hover {
+    background-color: #565656;
+    color: white;
+}
+
+.visit-item {
+    display: flex;
+    align-items: center;
+    background-color: #343333;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.visit-date {
+    background-color: #464646;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-right: 1rem;
+    color: white;
+}
+
+.visit-details {
+    flex: 1;
+}
+
+.visit-details h4 {
+    color: #ffffff;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.visit-details p {
+    color: #878686;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.visits .btn {
+    background-color: #454242;
+    color: white;
+}
+
+.visits .btn:hover {
+    background-color: #565656;
+    color: white;
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.activity-item img {
+    width: 32px;
+    height: 32px;
+    margin-right: 1rem;
+}
+
+.activity-details p {
+    color: #ffffff;
+    margin: 0;
+}
+
+.activity-details small {
+    color: #878686;
+}

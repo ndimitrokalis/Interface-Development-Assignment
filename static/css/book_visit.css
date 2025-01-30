@@ -1,0 +1,32 @@
+form {
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #2a2929;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+input[type="date"],
+input[type="text"],
+button[type="submit"] 
+{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: #454242;
+    color: #ffffff;
+}
+
+button:hover {
+    background-color: #080808;
+}

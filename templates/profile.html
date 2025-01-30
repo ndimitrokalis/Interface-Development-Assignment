@@ -7,20 +7,64 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
-
+<div class="container profile-main">
     <div class="profile-container">
 
         <div class="sidebar">
-            <h1>Profile Page</h1>
-            <a href="/profile/reservation">Book visit</a>
-            <a href="/profile/feedback">Give us feedback</a>
-    
+
+            <div class="user-info">
+                <div class="profile-image">
+                    <img src="/static/images/icons/empty profile.png">
+                    <div class="edit-overlay">
+                        <span>Edit</span>
+                    </div>
+                </div>
+                <h3 class="user-name">{{ current_user.first_name}} {{ current_user.last_name}}</h3>
+                <p class="user-email">{{ current_user.email }}</p>
+            </div>
             
-            <a href="/logout">Logout</a>
+            <nav class="profile-nav">
+                <a href="/profile/overview" class="active">
+                    <img src="/static/images/icons/user.png">
+                    Profile Overview
+                </a>
+                <a href="/profile/tickets">
+                    <img src="/static/images/icons/ticket.png">
+                    My Tickets
+                </a>
+                <a href="/profile/book/visit">
+                    <img src="/static/images/icons/calendar.png">
+                    Book Visit
+                </a>
+                <a href="/profile/history">
+                    <img src="/static/images/icons/history.png">
+                    Visit History
+                </a>
+                <a href="/profile/add/feedback">
+                    <img src="/static/images/icons/feedback.png">
+                    Give Feedback
+                </a>
+                <a href="/profile/settings">
+                    <img src="/static/images/icons/settings.png">
+                    Settings
+                </a>
+                <a href="/logout" class="logout">
+                    <img src="/static/images/icons/logout.png">
+                    Logout
+                </a>
+            </nav>
         </div>
 
-    </div>
+        <div class="content-area">
+            
+            <div class="profile-header">
+                <h1>{% block section %}{% endblock %}</h1>
+                <button class="btn btn-edit" onclick="window.location.href='/profile/edit'">Edit Profile</button>
+            </div>
 
+            {% block option %}{% endblock %}
+            
+        </div>
+    </div>
 </div>
 {% endblock %}

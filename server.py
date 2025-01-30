@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, LoginManager, login_required, logout_user, login_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
-from datetime import datetime
+from datetime import datetime, timezone
 
 app = Flask(__name__)
 
@@ -23,6 +23,20 @@ class User(UserMixin, db.Model):
     phone = db.Column(db.String(10), unique=True, nullable=False)
     password = db.Column(db.String(200), nullable=False)
     role = db.Column(db.String(20), nullable=False, default='visitor')
+    tickets = db.relationship('Ticket', back_populates='visitor')
+
+class Ticket(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    visitor_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=True)
+    date = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc), nullable=False)
+    type = db.Column(db.String(10), nullable=False)
+    amount = db.Column(db.Integer, default=1, nullable=True)
+    event_id = db.Column(db.Integer, db.ForeignKey('event.id'), nullable=True)
+    visitor = db.relationship('User', back_populates='tickets')
+
+class Event(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+
 
 @app.route("/")
 def home():
@@ -38,7 +52,7 @@ def login():
         if user and check_password_hash(user.password, password):
             login_user(user)
             if current_user.role != 'admin':
-                return redirect('/profile')
+                return redirect('/profile/overview')
             else:
                 return redirect('/dashboard')
         else:
@@ -101,10 +115,40 @@ def feedback():
 def contact():
     return render_template('contact.html')
 
-@app.route("/profile")
+@app.route("/profile/overview")
 @login_required
 def profile():
-    return render_template('profile.html')
+    return render_template('profile_overview.html')
+
+@app.route("/profile/book/visit")
+@login_required
+def reservation():
+    return render_template('book_visit.html')
+
+@app.route("/profile/add/feedback")
+@login_required
+def add_feedback():
+    return render_template('add_feedback.html')
+
+@app.route("/profile/tickets")
+@login_required
+def view_tickets():
+    return render_template('tickets_list.html')
+
+@app.route("/profile/history")
+@login_required
+def visit_history():
+    return render_template('visit_history.html')
+
+@app.route("/profile/settings")
+@login_required
+def settings():
+    return render_template('settings.html')
+
+@app.route("/profile/edit")
+@login_required
+def edit_profile():
+    return render_template('edit_profile.html')
 
 @app.route("/dashboard")
 @login_required
@@ -112,11 +156,6 @@ def dashboard():
     if current_user.role != 'admin':
         return "Unauthorized", 403
     return render_template('dashboard.html')
-
-@app.route("/logout")
-def logout():
-    logout_user()
-    return redirect('/')
 
 @app.route("/dashboard/add/news")
 @login_required
@@ -145,6 +184,11 @@ def view_feedback():
     if current_user.role != 'admin':
         return "Unauthorized", 403
     return render_template('view_feedback.html')
+
+@app.route("/logout")
+def logout():
+    logout_user()
+    return redirect('/')
 
 @login_manager.unauthorized_handler
 def unauthorized_callback():

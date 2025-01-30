@@ -1,0 +1,29 @@
+{% extends 'profile.html' %}
+
+{% block section %}Book Visit{% endblock %}
+
+{% block page_css %}
+    {{ super() }}
+    <link rel="stylesheet" href="/static/css/book_visit.css">
+{% endblock %}
+
+{% block option %}
+
+    <form method="post" action="/profile/book/visit">
+        
+        <label for="date">Date:</label>
+        <input type="date" name="date"><br><br>
+
+        <label for="type">Type:</label>
+        <input type="text" name="type" placeholder="Enter ticket type" required><br><br>
+        <select id="status" name="status">
+            <option value="To Do" {% if project.status == 'To Do' %}selected{% endif %}>To Do</option>
+            <option value="In Progress" {% if project.status == 'In Progress' %}selected{% endif %}>In Progress</option>
+            <option value="Completed" {% if project.status == 'Completed' %}selected{% endif %}>Completed</option>
+        </select>
+
+        <button type="submit">Add Client</button>
+
+    </form>
+
+{% endblock %}

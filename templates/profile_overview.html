@@ -1,0 +1,58 @@
+{% extends 'profile.html' %}
+
+{% block section %}Profile Overview{% endblock %}
+
+{% block page_css %}
+{{ super() }}
+<link rel="stylesheet" href="/static/css/profile_overview.css">
+{% endblock %}
+
+{% block option %}
+
+<div class="profile-cards">
+
+    <div class="info-card membership">
+        <h3>Membership Status</h3>
+        <div class="status-badge premium">Premium Member</div>
+        <p>Valid until: December 31, 2025</p>
+        <button class="btn btn-renew">Renew Membership</button>
+    </div>
+
+    <div class="info-card visits">
+        <h3>Upcoming Visits</h3>
+        <div class="visit-item">
+            <div class="visit-date">Mar 15, 2025</div>
+            <div class="visit-details">
+                <h4>Ancient Egypt Exhibition</h4>
+                <p>2 Adult Tickets</p>
+            </div>
+            <button class="btn btn-small">View</button>
+        </div>
+    </div>
+
+    <div class="info-card activity">
+        <h3>Recent Activity</h3>
+        <div class="activity-list">
+
+            <div class="activity-item">
+                <img src="/static/images/icons/ticket.png" alt="Ticket">
+                <div class="activity-details">
+                    <p>Booked tickets for Roman Engineering Marvels</p>
+                    <small>2 days ago</small>
+                </div>
+            </div>
+
+            <div class="activity-item">
+                <img src="/static/images/icons/feedback.png" alt="Feedback">
+                <div class="activity-details">
+                    <p>Left feedback for The Way of Tea exhibition</p>
+                    <small>1 week ago</small>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

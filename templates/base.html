@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="static/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/base.css">
     {% block page_css %}{% endblock %}
 </head>
 <body>
@@ -18,7 +18,7 @@
                   <a class="navbar-brand">Ancient History Museum</a>
           
                   <a href="/">
-                    <img src="https://i.postimg.cc/rp4BkzCx/museum-logo.png" id="museum-logo">
+                    <img src="/static/images/icons/museum logo.png" id="museum-logo">
                   </a>
           
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,11 +45,11 @@
                     <ul class="navbar-nav2 me-auto mb-2 mb-lg-0">
           
                       <li class="nav-item2">
-                          <a class="nav-link" href="/profile">Account</a>
+                          <a class="nav-link" href="/profile/overview">Account</a>
                       </li>
           
                       <li class="nav-item2">
-                          <img src="https://i.postimg.cc/V6c3L1DT/user.png" alt="Profile Icon">
+                          <img src="/static/images/icons/user.png">
                       </li>
           
                     </ul>
@@ -85,10 +85,10 @@
                   <h3>Follow us</h3>
                   <div class="social-icons">
                     <a href="https://x.com" target="_blank" class="icon"><img src="/static/images/footer/twitter.png" class="social-icon twitter"></a>
-                    <a href="https://facebook.com" target="_blank" class="icon"><img src="https://i.postimg.cc/g2XyShmy/facebook.png" class="social-icon facebook"></a>
-                    <a href="https://instagram.com" target="_blank" class="icon"><img src="https://i.postimg.cc/nLq4ZtsC/instagram.png" class="social-icon instagram"></a>
-                    <a href="https://tiktok.com" target="_blank" class="icon"><img src="https://i.postimg.cc/vZJrpmZJ/tiktok.png" class="social-icon tiktok"></a>
-                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&autoplay=1" target="_blank" class="icon"><img src="https://i.postimg.cc/0Qf7Md0v/youtube.png" class="social-icon youtube"></a>
+                    <a href="https://facebook.com" target="_blank" class="icon"><img src="/static/images/footer/facebook.png" class="social-icon facebook"></a>
+                    <a href="https://instagram.com" target="_blank" class="icon"><img src="/static/images/footer/instagram.png" class="social-icon instagram"></a>
+                    <a href="https://tiktok.com" target="_blank" class="icon"><img src="/static/images/footer/tiktok.png" class="social-icon tiktok"></a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&autoplay=1" target="_blank" class="icon"><img src="/static/images/footer/youtube.png" class="social-icon youtube"></a>
                   </div>
                 </div>
             
@@ -97,7 +97,7 @@
                   <form>
                     <input type="email" placeholder="Your email" id="email-placeholder" required>
                     <button type="submit">
-                      <img src="https://i.postimg.cc/651LfcJ5/email.png" class="email"> SUBSCRIBE
+                      <img src="/static/images/footer/email.png" class="email"> SUBSCRIBE
                     </button>
                   </form>
                 </div>
