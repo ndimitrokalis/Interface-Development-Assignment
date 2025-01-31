@@ -12,3 +12,14 @@
 4. pip install -r requirements.txt      #To install all the necessary libraries.
 5. python server.py                     #To start the program.
 </pre>
+## To use the website:
+### Admin:
+<pre>
+Email: ndimitrokalis@nyc.gr
+Password: 1234 
+</pre>
+### User:
+<pre>
+Email: ttestious@nyc.gr
+Password: 1234 
+</pre>
