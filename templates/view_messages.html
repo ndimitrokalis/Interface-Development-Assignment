@@ -5,8 +5,42 @@
 {% endblock %}
 
 {% block content %}
-    <h1>View Messages</h1>
-    <style>
-        h1 {color: rgb(255, 255, 255)};
-    </style>
+
+    <div class="message-container">
+        <h1>All Messages</h1>
+
+        {% if messages %}
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Text</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+
+                    {% for message in messages %}
+                        <tr class="message-row">
+                            <td class="name">{{ message.name }}</td>
+                            <td class="email">{{ message.email }}</td>
+                            <td class="text">{{ message.text }}</td>
+                        </tr>
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        {% else %}
+        
+            <p class="no-messages">No messages found.</p>
+    
+        {% endif %}
+
+    </div>
+
 {% endblock %}

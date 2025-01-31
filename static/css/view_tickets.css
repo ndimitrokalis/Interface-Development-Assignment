@@ -1,4 +1,4 @@
-.visits-container {
+.tickets-container {
     width: 100%;
     margin-top: 30px;
     padding: 20px;
@@ -34,16 +34,16 @@ th {
     font-weight: bold;
 }
 
-.visit-row {
+.ticket-row {
     background-color: #444;
 }
 
-.visit-row:hover {
+.ticket-row:hover {
     background-color: #555;
 }
 
 .date, .type, .amount {
-    color: #b5b5b5;
+    color: #ffffff;
 }
 
 .date {
@@ -55,7 +55,7 @@ th {
     white-space: pre-wrap;
 }
 
-.no-visits {
+.no-tickets {
     text-align: center;
     font-size: 18px;
     color: #ffffff;

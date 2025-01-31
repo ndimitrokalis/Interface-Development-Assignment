@@ -103,85 +103,45 @@
     <h2 class="text-white">Upcoming Events</h2>
 
     <div class="row g-4 mt-4">
-
-      <div class="col-lg-4 col-md-6">
-        <div class="card">
-          <img src="/static/images/events/event 1.png" class="card-img-top">
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-              <span class="d-flex align-items-center">
-                <img src="/static/images/icons/calendar.png" class="calendar"> 
-                <small>18 February 2025</small>
-              </span>
-              <span class="badge rounded-circle text-white p-2">
-                <img id="ticket" src="/static/images/icons/ticket.png" class="ticket"><div id="price"> 9€</div>
-              </span>
+        {% if events %}
+            {% for event in events %}
+                {% if event.is_listed %}
+                    <div class="col-lg-4 col-md-6">
+                      <div class="card">
+                          <img src="{{ event.image }}" class="card-img-top" alt="{{ event.title }}">
+                          <div class="card-body">
+                              <div class="d-flex justify-content-between align-items-center mb-3">
+                                  <span class="d-flex align-items-center">
+                                      <img src="/static/images/icons/calendar.png" class="calendar"> 
+                                      <small>{{ event.date.strftime('%d %B %Y') }}</small>
+                                  </span>
+                                  <span class="badge rounded-circle text-white p-2">
+                                      <img id="ticket" src="/static/images/icons/ticket.png" class="ticket">
+                                      <div id="price"> {{ event.price }}{% if event.price != 'Free' %}€{% endif %}</div>
+                                  </span>
+                              </div>
+                              <h5 class="card-title">{{ event.title }}</h5>
+                              <p class="card-text">{{ event.description }}</p>
+                              <a href="/profile/book/visit" class="btn btn-dark w-100 d-flex justify-content-between align-items-center">
+                                  Book now
+                                  <span class="badge2 rounded-circle p-2">
+                                      <img src="/static/images/icons/button-arrow.png" class="button-arrow">
+                                  </span>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            <div class="col-12">
+                <div class="alert alert-info">
+                    No upcoming events scheduled at this time. Please check back later!
+                </div>
             </div>
-            <h5 class="card-title">The Silk Roads in Three Objects</h5>
-            <p class="card-text">Discover the story of the Silk Roads through three exceptional objects in this online event featuring expert speakers.</p>
-            <a href="#" class="btn btn-dark w-100 d-flex justify-content-between align-items-center">
-              Book now
-              <span class="badge2 rounded-circle p-2">
-                <img src="/static/images/icons/button-arrow.png" class="button-arrow">
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="card">
-          <img src="/static/images/events/event 2.png" class="card-img-top">
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-              <span class="d-flex align-items-center">
-                <img src="/static/images/icons/calendar.png" class="calendar"> 
-                <small>5 March 2025</small>
-              </span>
-              <span class="badge rounded-circle text-white p-2">
-                <img id="ticket" src="/static/images/icons/ticket.png" class="ticket"><div id="price"> Free</div>
-              </span>
-            </div>
-            <h5 class="card-title">The Way of Tea</h5>
-            <p class="card-text">Discover the history of tea drinking and gathering in Japan in this free demonstration of a Japanese tea ceremony.</p>
-            <a href="#" class="btn btn-dark w-100 d-flex justify-content-between align-items-center">
-              Book now
-              <span class="badge2 rounded-circle p-2">
-                <img src="/static/images/icons/button-arrow.png" class="button-arrow">
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-4 col-md-6">
-        <div class="card">
-          <img src="/static/images/events/event 3.png" class="card-img-top">
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-              <span class="d-flex align-items-center">
-                <img src="/static/images/icons/calendar.png" class="calendar"> 
-                <small>14 August 2025</small>
-              </span>
-              <span class="badge rounded-circle text-white p-2">
-                <img id="ticket" src="/static/images/icons/ticket.png" class="ticket"><div id="price"> 9€</div>
-              </span>
-            </div>
-            <h5 class="card-title">Ancient Currencies</h5>
-            <p class="card-text">Discover tales of ancient currencies through our remarkable artifacts in this event featuring ancient coins from around the world.</p>
-            <a href="#" class="btn btn-dark w-100 d-flex justify-content-between align-items-center">
-              Book now
-              <span class="badge2 rounded-circle p-2">
-                <img src="/static/images/icons/button-arrow.png" class="button-arrow">
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-
+        {% endif %}
     </div>
-
-  </div>
+</div>
 
 </div>
 

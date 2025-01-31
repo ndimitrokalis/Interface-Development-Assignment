@@ -1,0 +1,29 @@
+{% extends 'dashboard.html' %}
+
+{% block page_css %}
+<link rel="stylesheet" href="/static/css/add_exhibit.css">
+{% endblock %}
+
+{% block content %}
+
+    <form method="post" action="/dashboard/add/exhibit">
+
+        <h1>Add Exhibit</h1>
+
+        <label for="title">Title:</label>
+        <input type="text" name="title" placeholder="Enter exhibit title" required><br>
+
+        <label for="description">Description:</label>
+        <textarea name="description" placeholder="Enter exhibit description" rows="5" required></textarea><br>
+
+        <label for="narrative">Narrative:</label>
+        <textarea name="narrative" placeholder="Enter exhibit narrative" rows="3" required></textarea><br>
+
+        <label for="image">Image:</label>
+        <input type="text" name="image" placeholder="Enter image's path" required><br><br>
+
+        <button type="submit">Post Exhibit</button>
+        
+    </form>
+
+{% endblock %}

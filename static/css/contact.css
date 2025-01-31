@@ -78,6 +78,22 @@ body {
     border-radius: 10px;
 }
 
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: #454242;
+    color: #ffffff;
+}
+
+.contact-form button:hover {
+    background-color: #080808;
+}
+
 .form-group {
     margin-bottom: 20px;
 }

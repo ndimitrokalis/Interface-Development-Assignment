@@ -1,7 +1,6 @@
 .profile-main {
     margin-top: 40px;
     margin-bottom: 25px;
-    min-height: calc(100vh - 200px);
 }
 
 .profile-container {
@@ -12,12 +11,12 @@
     min-height: 80vh;
 }
 
-/* Sidebar Styles */
 .sidebar {
     width: 280px;
     background-color: #2a2929;
     padding: 2rem 0;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .user-info {
@@ -71,6 +70,9 @@
 }
 
 .profile-nav {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     padding: 0 1rem;
 }
 
@@ -97,11 +99,10 @@
 }
 
 .profile-nav .logout {
-    margin-top: 2rem;
+    margin-top: auto;
     color: #ff4444;
 }
 
-/* Main Content Area */
 .content-area {
     flex: 1;
     padding: 2rem;
@@ -135,7 +136,6 @@
     color: white;
 }
 
-/* Responsive Design */
 @media (max-width: 992px) {
     .profile-container {
         flex-direction: column;

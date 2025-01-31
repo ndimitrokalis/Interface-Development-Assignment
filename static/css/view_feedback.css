@@ -1,0 +1,152 @@
+.feedback-container {
+    width: 100%;
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.feedback-container h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: clamp(24px, 4vw, 32px);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    min-width: 600px;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    border: 2px solid #1F1C1C;
+    vertical-align: top;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+
+
+th {
+    background-color: #1F1C1C;
+    color: #ffffff;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.feedback-row {
+    background-color: #444;
+}
+
+.feedback-row:hover {
+    background-color: #555;
+}
+
+.visitor-id, .ticket-id, .date, .rating, .text {
+    color: #ffffff;
+}
+
+.visitor-id {
+    font-weight: bold;
+}
+
+.ticket-id {
+    font-family: monospace;
+}
+
+.rating {
+    text-align: center;
+}
+
+.text {
+    font-style: italic;
+    white-space: pre-wrap;
+}
+
+.feedback-row .actions {
+    text-align: center;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+.delete-form {
+    margin: 0;
+}
+
+.no-feedback {
+    text-align: center;
+    font-size: clamp(16px, 3vw, 18px);
+    color: #ffffff;
+    padding: 20px;
+}
+
+.feedback-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.feedback-container::-webkit-scrollbar-track {
+    background: #1F1C1C;
+    border-radius: 4px;
+}
+
+.feedback-container::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+}
+
+.feedback-container::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+
+@media screen and (min-width: 768px) {
+    th:nth-child(1), td:nth-child(1) { width: 15%; }
+    th:nth-child(2), td:nth-child(2) { width: 10%; }
+    th:nth-child(3), td:nth-child(3) { width: 12%; }
+    th:nth-child(4), td:nth-child(4) { width: 8%; }
+    th:nth-child(5), td:nth-child(5) { width: 45%; }
+    th:nth-child(6), td:nth-child(6) { width: 10%; }
+}
+
+@media screen and (max-width: 767px) {
+    .feedback-container {
+        width: 100%;
+        padding: 10px;
+        margin: 15px auto;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+
+    .text {
+        max-height: 100px;
+        overflow-y: auto;
+    }
+
+    .delete-btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}

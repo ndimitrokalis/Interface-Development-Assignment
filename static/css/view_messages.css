@@ -1,0 +1,131 @@
+.message-container {
+    width: 80%;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.message-container h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed;
+}
+
+th, td {
+    text-align: left;
+    padding: 12px 15px;
+    border: 2px solid #1F1C1C;
+    vertical-align: top;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 0;
+}
+
+th:nth-child(1), td:nth-child(1) { width: 15%; }
+th:nth-child(2), td:nth-child(2) { width: 25%; } 
+th:nth-child(3), td:nth-child(3) { width: 60%; }
+
+th {
+    background-color: #1F1C1C;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.message-row {
+    background-color: #444;
+}
+
+.message-row:hover {
+    background-color: #555;
+}
+
+.name, .email, .text {
+    color: #ffffff;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.text {
+    font-style: italic;
+    white-space: pre-wrap;
+}
+
+.no-messages {
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.message-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.message-container::-webkit-scrollbar-track {
+    background: #1F1C1C;
+    border-radius: 4px;
+}
+
+.message-container::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+}
+
+.message-container::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+
+@media screen and (max-width: 985px) {
+    .message-container {
+        width: 90%;
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    table {
+        font-size: 18px;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+
+    .text {
+        max-height: 100px;
+        overflow-y: auto;
+    }
+
+}
+
+@media screen and (max-width: 796px) {
+    .message-container {
+        width: 100%;
+        padding: 10px;
+        margin: 15px auto;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+
+    .text {
+        max-height: 100px;
+        overflow-y: auto;
+    }
+
+}

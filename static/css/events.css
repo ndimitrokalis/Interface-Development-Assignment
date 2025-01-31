@@ -135,6 +135,10 @@ body {
     flex-grow: 1;
 }
 
+.event-content a {
+    text-decoration: none;
+}
+
 .book-button {
     width: 100%;
     background-color: #000;

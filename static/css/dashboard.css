@@ -10,8 +10,8 @@ body {
 .sidebar {
     display: flex;
     flex-direction: column;
-    height: 100vh; /* Full viewport height */
-    width: 300px; /* Sidebar width */
+    height: 100vh;
+    width: 300px;
     background-color: #333;
     color: white;
     padding: 10px;
@@ -19,6 +19,7 @@ body {
 
 .actions {
     flex: 1;
+    margin-top: 30px;
 }
 
 .sidebar h2 {
@@ -26,6 +27,7 @@ body {
     color: #fff;
     padding: 10px;
     font-size: 1.8rem;
+    margin-top: 10px
 }
 
 .sidebar a {
@@ -38,6 +40,15 @@ body {
 
 .sidebar a:hover {
     background-color: #454242;
+}
+
+.logout a img {
+    width: 24px;
+    height: 24px;
+}
+
+.logout a {
+    color: #ff4444;
 }
 
 .content {

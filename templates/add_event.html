@@ -5,8 +5,28 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Add Event</h1>
-    <style>
-        h1 {color: rgb(255, 255, 255)};
-    </style>
+
+    <form method="post" action="/dashboard/add/event">
+
+        <h1>Add Event</h1>
+
+        <label for="title">Title:</label>
+        <input type="text" name="title" placeholder="Enter event title" required><br>
+
+        <label for="description">Description:</label>
+        <textarea name="description" placeholder="Enter event description" rows="5" required></textarea><br>
+
+        <label for="date">Date:</label>
+        <input type="date" name="date"><br>
+
+        <label for="image">Image:</label>
+        <input type="text" name="image" placeholder="Enter image's path" required><br>
+
+        <label for="price">Price:</label>
+        <input type="text" name="price" placeholder="Enter event's ticket price"><br><br>
+
+        <button type="submit">Post Event</button>
+        
+    </form>
+
 {% endblock %}

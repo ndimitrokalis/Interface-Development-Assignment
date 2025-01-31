@@ -1,0 +1,58 @@
+#ticket-form {
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #2a2929;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+
+#ticket-btn,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: #454242;
+    color: #ffffff;
+}
+
+#ticket-btn:hover {
+    background-color: #080808;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.star-rating {
+    direction: rtl;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: -35px;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 50px;
+    color: rgb(100, 85, 0);
+    cursor: pointer;
+}
+
+.star-rating input:checked ~ label {
+    color: gold;
+}

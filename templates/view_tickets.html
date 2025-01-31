@@ -1,17 +1,17 @@
 {% extends 'profile.html' %}
 
-{% block section %}Visit History{% endblock %}
+{% block section %}Tickets{% endblock %}
 
 {% block page_css %}
     {{ super() }}
-    <link rel="stylesheet" href="/static/css/visit_history.css">
+    <link rel="stylesheet" href="/static/css/view_tickets.css">
 {% endblock %}
 
 {% block option %}
 
-    <div class="visits-container">
+    <div class="tickets-container">
 
-        {% if visits %}
+        {% if tickets %}
 
             <table>
 
@@ -25,11 +25,11 @@
                 
                 <tbody>
 
-                    {% for visit in visits %}
-                        <tr class="visit-row">
-                            <td class="date">{{ visit.date }}</td>
-                            <td class="type">{{ visit.type }}</td>
-                            <td class="amount">{{ visit.amount }}</td>
+                    {% for ticket in tickets %}
+                        <tr class="ticket-row">
+                            <td class="date">{{ ticket.date }}</td>
+                            <td class="type">{{ ticket.type }}</td>
+                            <td class="amount">{{ ticket.amount }}</td>
                         </tr>
                     {% endfor %}
 
@@ -39,7 +39,7 @@
 
         {% else %}
         
-            <p class="no-visits">No visits found.</p>
+            <p class="no-tickets">No tickets found.</p>
 
         {% endif %}
 

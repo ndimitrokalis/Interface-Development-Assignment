@@ -5,22 +5,39 @@
 {% block page_css %}
     {{ super() }}
     <link rel="stylesheet" href="/static/css/book_visit.css">
+    <script src="/static/js/scripts.js"></script>
 {% endblock %}
 
 {% block option %}
 
-    <form method="post" action="/profile/book/visit">
+    <form method="post" action="/profile/book/visit" class="book-visit">
         
         <label for="date">Date:</label>
-        <input type="date" name="date"><br><br>
+        <input type="date" name="date" id="date" required><br>
 
+        <label for="event">Event:</label>
+        <select name="event-id" id="event">
+            <option value="" selected>Not selected</option>
+            {% for event in events %}
+                <option value="{{ event.id }}">
+                    {{ event.title }} - {{ event.date }}
+                </option>
+            {% else %}
+                <option disabled>No Events</option>
+            {% endfor %}
+        </select><br>
+        
         <label for="type">Type:</label>
-        <input type="text" name="type" placeholder="Enter ticket type" required><br><br>
-        <select id="status" name="status">
-            <option value="To Do" {% if project.status == 'To Do' %}selected{% endif %}>To Do</option>
-            <option value="In Progress" {% if project.status == 'In Progress' %}selected{% endif %}>In Progress</option>
-            <option value="Completed" {% if project.status == 'Completed' %}selected{% endif %}>Completed</option>
-        </select>
+        <select name="type" required>
+            <option value="" disabled selected>Not selected</option>
+            <option value="adults">Adults</option>
+            <option value="students">Students</option>
+            <option value="children">Children</option>
+        </select><br>
+
+
+        <label for="amount">Amount:</label>
+        <input type="number" name="amount" placeholder="Select number of tickets" min="1" max="10" step="1" required><br><br>
 
         <button type="submit">Add Client</button>
 

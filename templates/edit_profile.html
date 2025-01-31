@@ -9,4 +9,39 @@
 
 {% block option %}
 
+    <form method="post" action="/profile/edit" class="profile-form">
+
+        <label for="first-name">First Name:</label>
+        <input type="text" name="first-name" value="{{ user.first_name }}" placeholder="Change first name" required><br>
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" name="last-name" value="{{ user.last_name }}" placeholder="Change last name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" value="{{ user.email }}" placeholder="Change email" required><br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" name="phone" value="{{ user.phone }}" placeholder="Change phone" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" placeholder="Enter current password" required><br>
+
+        <label for="new-password">Change Password:</label>
+        <input type="password" name="new-password" placeholder="Enter new password"><br>
+        
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" name="confirm-password" placeholder="Re-type new password"><br><br>
+
+        <button type="submit">Save Changes</button>
+        
+    </form>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ category }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
 {% endblock %}

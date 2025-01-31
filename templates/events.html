@@ -20,205 +20,39 @@
         </div>
 
         <div class="events-grid">
-
-            <div class="event-card">
-                <img src="/static/images/events/event 1.png" class="event-image">
-                <div class="event-content">
-                    <div class="event-header">
-                        <div class="date-badge">
-                            <img src="/static/images/icons/calendar.png" class="calendar-icon">
-                            <span>18 February 2025</span>
+            {% if events %}
+                {% for event in events %}
+                    {% if event.is_listed %}
+                        <div class="event-card">
+                            <img src="{{ event.image }}" class="event-image">
+                            <div class="event-content">
+                                <div class="event-header">
+                                    <div class="date-badge">
+                                        <img src="/static/images/icons/calendar.png" class="calendar-icon">
+                                        <span>{{ event.date.strftime('%d %B %Y') }}</span>
+                                    </div>
+                                    <div class="price-badge">
+                                        <img src="/static/images/icons/ticket.png" class="ticket-icon">
+                                        <span>{{ event.price }}{% if event.price != 'Free' %}€{% endif %}</span>
+                                    </div>
+                                </div>
+                                <h2 class="event-title">{{ event.title }}</h2>
+                                <p class="event-description">{{ event.description }}</p>
+                                <a href="/profile/book/visit">
+                                    <button class="book-button">
+                                        Book now
+                                        <img src="/static/images/icons/button-arrow.png" class="arrow-icon">
+                                    </button>
+                                </a>
+                            </div>
                         </div>
-                        <div class="price-badge">
-                            <img src="/static/images/icons/ticket.png" class="ticket-icon">
-                            <span>9€</span>
-                        </div>
-                    </div>
-                    <h2 class="event-title">The Silk Roads in three objects</h2>
-                    <p class="event-description">Discover the story of the Silk Roads through three exceptional objects in this online event featuring expert speakers.</p>
-                    <button class="book-button">
-                        Book now
-                        <img src="/static/images/icons/button-arrow.png" class="arrow-icon">
-                    </button>
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                <div class="alert alert-info">
+                    No upcoming events scheduled at this time. Please check back later!
                 </div>
-            </div>
-            
-            <div class="event-card">
-                <img src="/static/images/events/event 2.png" class="event-image">
-                <div class="event-content">
-                    <div class="event-header">
-                        <div class="date-badge">
-                            <img src="/static/images/icons/calendar.png" class="calendar-icon">
-                            <span>5 March 2025</span>
-                        </div>
-                        <div class="price-badge">
-                            <img src="/static/images/icons/ticket.png" class="ticket-icon">
-                            <span>Free</span>
-                        </div>
-                    </div>
-                    <h2 class="event-title">The way of tea</h2>
-                    <p class="event-description">Discover the history of tea drinking and gathering in Japan in this free demonstration of a Japanese tea ceremony.</p>
-                    <button class="book-button">
-                        Book now
-                        <img src="/static/images/icons/button-arrow.png" class="arrow-icon">
-                    </button>
-                </div>
-            </div>
-
-            <div class="event-card">
-                <img src="/static/images/events/event 3.png" class="event-image">
-                <div class="event-content">
-                    <div class="event-header">
-                        <div class="date-badge">
-                            <img src="/static/images/icons/calendar.png" class="calendar-icon">
-                            <span>14 August 2025</span>
-                        </div>
-                        <div class="price-badge">
-                            <img src="/static/images/icons/ticket.png" class="ticket-icon">
-                            <span>7€</span>
-                        </div>
-                    </div>
-                    <h2 class="event-title">The Silk Roads in three objectsAncient currencies</h2>
-                    <p class="event-description">Discover tales of ancient currencies through our remarkable artifacts in this event featuring ancient coins from around the world.</p>
-                    <button class="book-button">
-                        Book now
-                        <img src="/static/images/icons/button-arrow.png" class="arrow-icon">
-                    </button>
-                </div>
-            </div>
-
-            <div class="event-card">
-                <img src="/static/images/events/event 4.png" class="event-image">
-                <div class="event-content">
-                    <div class="event-header">
-                        <div class="date-badge">
-                            <img src="/static/images/icons/calendar.png" class="calendar-icon">
-                            <span>20 September 2025</span>
-                        </div>
-                        <div class="price-badge">
-                            <img src="/static/images/icons/ticket.png" class="ticket-icon">
-                            <span>12€</span>
-                        </div>
-                    </div>
-                    <h2 class="event-title">Mysteries of the Pharaohs</h2>
-                    <p class="event-description">Delve into the fascinating history of Ancient Egypt through a storytelling session about the mysteries of the Pharaohs and their pyramids.</p>
-                    <button class="book-button">
-                        Book now
-                        <img src="/static/images/icons/button-arrow.png" class="arrow-icon">
-                    </button>
-                </div>
-            </div>
-
-            <div class="event-card">
-                <img src="/static/images/events/event 5.png" class="event-image">
-                <div class="event-content">
-                    <div class="event-header">
-                        <div class="date-badge">
-                            <img src="/static/images/icons/calendar.png" class="calendar-icon">
-                            <span>10 October 2025</span>
-                        </div>
-                        <div class="price-badge">
-                            <img src="/static/images/icons/ticket.png" class="ticket-icon">
-                            <span>8€</span>
-                        </div>
-                    </div>
-                    <h2 class="event-title">Medieval Armor and Warfare</h2>
-                    <p class="event-description">Discover the world of medieval warfare through a showcase of armor and weapons, with insights into historical battles.</p>
-                    <button class="book-button">
-                        Book now
-                        <img src="/static/images/icons/button-arrow.png" class="arrow-icon">
-                    </button>
-                </div>
-            </div>
-
-            <div class="event-card">
-                <img src="/static/images/events/event 6.png" class="event-image">
-                <div class="event-content">
-                    <div class="event-header">
-                        <div class="date-badge">
-                            <img src="/static/images/icons/calendar.png" class="calendar-icon">
-                            <span>15 November 2025</span>
-                        </div>
-                        <div class="price-badge">
-                            <img src="/static/images/icons/ticket.png" class="ticket-icon">
-                            <span>7€</span>
-                        </div>
-                    </div>
-                    <h2 class="event-title">Roman Engineering Marvels</h2>
-                    <p class="event-description">Join us for an engaging lecture on the architectural and engineering feats of the Roman Empire, featuring 3D models and artifacts.</p>
-                    <button class="book-button">
-                        Book now
-                        <img src="/static/images/icons/button-arrow.png" class="arrow-icon">
-                    </button>
-                </div>
-            </div>
-
-            <div class="event-card">
-                <img src="/static/images/events/event 7.png" class="event-image">
-                <div class="event-content">
-                    <div class="event-header">
-                        <div class="date-badge">
-                            <img src="/static/images/icons/calendar.png" class="calendar-icon">
-                            <span>5 December 2025</span>
-                        </div>
-                        <div class="price-badge">
-                            <img src="/static/images/icons/ticket.png" class="ticket-icon">
-                            <span>Free</span>
-                        </div>
-                    </div>
-                    <h2 class="event-title">Stories of the Ancient Seas</h2>
-                    <p class="event-description">Dive into the adventures of ancient maritime trade and exploration with rare artifacts and expert narrators.</p>
-                    <button class="book-button">
-                        Book now
-                        <img src="/static/images/icons/button-arrow.png" class="arrow-icon">
-                    </button>
-                </div>
-            </div>
-
-            <div class="event-card">
-                <img src="/static/images/events/event 8.png" class="event-image">
-                <div class="event-content">
-                    <div class="event-header">
-                        <div class="date-badge">
-                            <img src="/static/images/icons/calendar.png" class="calendar-icon">
-                            <span>25 January 2026</span>
-                        </div>
-                        <div class="price-badge">
-                            <img src="/static/images/icons/ticket.png" class="ticket-icon">
-                            <span>6€</span>
-                        </div>
-                    </div>
-                    <h2 class="event-title">The Evolution of Writing</h2>
-                    <p class="event-description">Trace the journey of written language through the ages, from cuneiform tablets to early manuscripts, with hands-on activities.</p>
-                    <button class="book-button">
-                        Book now
-                        <img src="/static/images/icons/button-arrow.png" class="arrow-icon">
-                    </button>
-                </div>
-            </div>
-
-            <div class="event-card">
-                <img src="/static/images/events/event 9.png" class="event-image">
-                <div class="event-content">
-                    <div class="event-header">
-                        <div class="date-badge">
-                            <img src="/static/images/icons/calendar.png" class="calendar-icon">
-                            <span>10 March 2026</span>
-                        </div>
-                        <div class="price-badge">
-                            <img src="/static/images/icons/ticket.png" class="ticket-icon">
-                            <span>10€</span>
-                        </div>
-                    </div>
-                    <h2 class="event-title">Art of Ancient Pottery</h2>
-                    <p class="event-description">Explore the beauty and craftsmanship of ancient pottery in this interactive session with expert historians and hands-on activities.</p>
-                    <button class="book-button">
-                        Book now
-                        <img src="/static/images/icons/button-arrow.png" class="arrow-icon">
-                    </button>
-                </div>
-            </div>
-            
+            {% endif %}
         </div>
 
         <div class="pagination">

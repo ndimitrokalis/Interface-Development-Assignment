@@ -9,4 +9,34 @@
 
 {% block option %}
 
+    <form action="/profile/add/feedback" method="POST" id="ticket-form">
+            
+        <label for="ticket_id">Ticket ID:</label>
+        <select name="visit-id" required>
+            <option value="" disabled selected>Not selected</option>
+            {% for visit in visits %}
+                <option value="{{ visit.id }}">
+                    {{ visit.date }}
+                </option>
+            {% else %}
+                <option disabled>No Visits</option>
+            {% endfor %}
+        </select><br>
+
+        <label>Rating:</label><br>
+        <div class="star-rating">
+            <input type="radio" id="star5" name="rating" value="5" required> <label for="star5">&#9733;</label><br>
+            <input type="radio" id="star4" name="rating" value="4"> <label for="star4">&#9733;</label><br>
+            <input type="radio" id="star3" name="rating" value="3"> <label for="star3">&#9733;</label><br>
+            <input type="radio" id="star2" name="rating" value="2"> <label for="star2">&#9733;</label><br>
+            <input type="radio" id="star1" name="rating" value="1"> <label for="star1">&#9733;</label><br><br>
+        </div>
+
+        <label for="feedback">Your Feedback:</label><br>
+        <textarea name="text" rows="5" required></textarea><br><br>
+        
+        <button type="submit" id="ticket-btn">Submit</button>
+
+    </form>
+
 {% endblock %}
